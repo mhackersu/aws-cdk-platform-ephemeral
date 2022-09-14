@@ -120,9 +120,9 @@ This is the "easy-button" single script that kicks off the build and release pro
 Follow these steps to launch the environment:
 
 - Navigate to the command line
-- From the command line, make sure you are at the root directory of this project `pwd`
-- Navigate to the inf directory `cd inf`
-- Type the following
+- From the command line, make sure you are at the root directory of this project. You can type `pwd` on a linux terminal to display the current working directory which is a handy way of looking up where you are.
+- Navigate to the inf directory. This can be done by typing `cd inf`
+- Next, type the following
 
 `./inf/.ci-start.sh`
 
