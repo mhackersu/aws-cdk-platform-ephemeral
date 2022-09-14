@@ -35,7 +35,7 @@ According to the experiment, work is not to exceed 3 total hours, therefore I ha
 - We lean towards CDK over Terraform.
 - It's really important to control this process thru an entry script, in comparision to, some hosted CI Saas tooling (eg. GitHub Actions).
 - Assuming bash shell scripts are appropriate selection (_as per TS, node, etc._).
-- Proper secret management is important.
+- Adhoc/sandbox creds are throw away credentials but they should be approached programmatically as if they actually are sensitive values, as, ultimatly, they become patterns that are developed over time as containers are bootstrapped in the beginning phases of Day 0 Ops.
 
 # Reasoning
 
