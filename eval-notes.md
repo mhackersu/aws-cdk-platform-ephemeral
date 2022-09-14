@@ -59,7 +59,7 @@ Reading readme.md, reading over the Dockerfiles, validating access, etc.
 
 - Main branch protected, continuing work on `chore/shell-scripts`. Setting up Dockerfile for ephermeral environment (build dependencies, etc).
 
-- In favor of the single script approach, `x-www-browser` has been chosen to instanciate the ephermeral environment (using Gitpod, which is a hosted Dockerfile with the IDE integration thru VS Code).
+- In favor of the single script approach, A little `x-www-browser` function has been used to instanciate the ephermeral environment (using Gitpod, which is a hosted Dockerfile with the IDE integration thru VS Code).
 
 - We'll need to pass some environmental variables to our new environment.
 
@@ -80,9 +80,11 @@ sak="Secret access key"
 
 >`mlr --c2j --jlistwrap cat ../../mike-creds.csv | jq`
 
-- The script will provide us with an assembled URL in which we may reference our new ephermeral environment and in which credentials from ourside the repository in a csv, may be read into the new envrionment and set as environmental variables that are also secrets.
+- The script will provide us with an assembled URL in which we may reference our new ephermeral environment and in which credentials from outside the repository in a csv, may be read into the new envrionment and set as environmental variables that are also secrets.
 
 - Adding a little dove-tailing for future prd things. ```(:```
+
+- Should have everything ready to start serving up some backend over https on the public 0.0.0.0 *
 
 #### Sprint 3
 
@@ -97,3 +99,26 @@ sak="Secret access key"
 # Hypothesis
 
 # Experiments
+
+- GitHub Actions
+- Localstack
+
+# Results
+
+## Env Init Script
+
+This script installs `jq` and `miller` that's it.
+
+```
+./inf/.ci-init.sh
+```
+
+## Env Launch Script
+
+This is the "easy-button" single script that kicks off the build and release processes.
+
+From the command line, at the root of the project, type the following:
+
+`./inf/.ci-start.sh`
+
+This command will read the credentials from the file supplied and launch a web-browser with a web-version VS Code IDE environment.

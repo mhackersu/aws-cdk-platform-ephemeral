@@ -2,4 +2,7 @@
 
 # Install Miller, JQ
 
-yay miller jq
+brew install jq && brew install miller
+# apt-get install jq miller
+# pacman -Sy jq miller
+# yay jq miller
