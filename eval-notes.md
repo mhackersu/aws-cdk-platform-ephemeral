@@ -39,6 +39,8 @@ According to the experiment, work is not to exceed 3 total hours, therefore I ha
 
 # Reasoning
 
+- Upon implementation and evalaution of the following environmental variables, we can validate that the secrets are being passed into the ephermeral environment. When the secrets are being passed into the query string, this is acceptable for a development environment with short-lived credentials, but we would not want this approach for production as per [CWE-598](https://cwe.mitre.org/data/definitions/598.html), and in those scenerios, we would be pulling from a vault within in an air-gapped build and deploy environment, but for sandbox purposes, this approach is fine for a POC with throw-away creds established for short-lived purposes, such as technical evalautions.
+
 # Timeline
 
 #### Sprint 0
@@ -80,9 +82,7 @@ sak="Secret access key"
 
 - The script will provide us with an assembled URL in which we may reference our new ephermeral environment and in which credentials from ourside the repository in a csv, may be read into the new envrionment and set as environmental variables that are also secrets.
 
-Upon implementation and evalaution of the following environmental variables, we can validate that the secrets are being passed into the ephermeral environment. When the secrets are being passed into the query string, this is acceptable for a development environment with short-lived credentials, but we would not want this approach for production as per [CWE-598](https://cwe.mitre.org/data/definitions/598.html), and in those scenerios, we would be pulling from a valut in an air-gapped environment, but for sandbox credentials, this approach is fine for a POC. 
-
-Furthermore, it would be reccomended that we include the IAM sandbox provisioning into the equation, so that sandbox credentials are limited to single use and current mode of interpolation is satisfactory for adhoc development environments only.
+- Adding a little dove-tailing for future prd things. ```(:```
 
 #### Sprint 3
 
