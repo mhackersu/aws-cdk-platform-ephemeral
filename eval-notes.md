@@ -141,7 +141,10 @@ Note: If testing this configuration, as is, it will be important to validate tha
 Once your environment has fully launched, within the shell, issue the following to set your credentials.
 
 ```
-export USERNAME = <username> && export PASSWORD = <password> && export ACCESS_KEY_ID = <access-key-id> && export SECRET_ACCESS_KEY = <secret-access-key>
+export USERNAME = <username> && \n
+export PASSWORD = <password> && \n
+export ACCESS_KEY_ID = <access-key-id> && \n
+export SECRET_ACCESS_KEY = <secret-access-key>
 ```
 
 Where the values incapsulated in left and right arrows <> are replaced with your properly intended AWS credentials.
