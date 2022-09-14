@@ -117,8 +117,19 @@ This script installs `jq` and `miller` that's it.
 
 This is the "easy-button" single script that kicks off the build and release processes.
 
-From the command line, at the root of the project, type the following:
+Follow these steps to launch the environment:
+
+- Navigate to the command line
+- From the command line, make sure you are at the root directory of this project `pwd`
+- Navigate to the inf directory `cd inf`
+- Type the following
 
 `./inf/.ci-start.sh`
 
 This command will read the credentials from the file supplied and launch a web-browser with a web-version VS Code IDE environment.
+
+In this instance, this project is housed within in a directory above this project directory which contains this project and a csv file with the supplied credentials.
+
+Note: If testing this configuration, as is, it will be important to validate that a csv file is in the directory above this project directoy on a workstation you are running the script from. If this is the case, update the following lines:
+
+- line 4 in `./inf/.ci-start.sh` will need to reflect the proper relational position along with the matching name of the csv file being provided. 
