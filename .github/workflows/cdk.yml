@@ -1,3 +1,0 @@
-- name: AWS CDK GitHub Actions
-  uses: youyo/aws-cdk-github-actions@v2.1.1
-
