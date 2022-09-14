@@ -43,7 +43,7 @@ Reading readme.md, reading over the Dockerfiles, validating access, etc.
 
   * Re-reading readme.md, installing some tooling such as CDK, validating non-UI access with API keys, etc, testing provisioned sandbox account with some basic commands.
 
-* Researching `youyo/aws-cdk-github-actions@v2.1.1`
+* Researching `youyo/aws-cdk-github-actions@v2.1.1` - While this does seem like a novel approach with `cdk diff && cdk deploy`, upon re-reading the challange, it seems the spirit of the challange is a bit more of a single command, which reads less GitHub Actions, and more something more like a shell script. Pushing stubs to experiment/cdk-actions and re-stubbing some shell. Next question, environment.
 
 #### Day 3
 
