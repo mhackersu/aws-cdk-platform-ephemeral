@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
-    "build-express": "esbuild express.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/express.js",
+    "build-producer": "esbuild express.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/express.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
