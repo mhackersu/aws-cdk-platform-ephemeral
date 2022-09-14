@@ -19,6 +19,8 @@ echo "Secret Access Key: ******** SECRET ACCESS KEY REDACTED ********"
 
 echo "*** END AWS CREDSTACK ***"
 
+echo "*** NO USE IN PRD / FOR DEV ONLY ***"
+
 #/usr/bin/env bash
 
 if which xdg-open > /dev/null; then
