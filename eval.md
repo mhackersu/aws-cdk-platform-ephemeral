@@ -41,7 +41,9 @@ Reading readme.md, reading over the Dockerfiles, validating access, etc.
 
 #### Day 2
 
-Re-reading readme.md, installing some tooling such as CDK, validating non-UI access with API keys, etc, testing provisioned sandbox account with some basic commands.
+  * Re-reading readme.md, installing some tooling such as CDK, validating non-UI access with API keys, etc, testing provisioned sandbox account with some basic commands.
+
+* Researching `youyo/aws-cdk-github-actions@v2.1.1`
 
 #### Day 3
 
