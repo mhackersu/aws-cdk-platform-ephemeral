@@ -136,7 +136,7 @@ Note: If testing this configuration, as is, it will be important to validate tha
 
 ## Alternative Launch Button (Experimental)
 
-[![Open in Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](http://gitpod.io/#/un=$USER_NAME,pw=$PASSWORD,aki=$ACCESS_KEY_ID,sak=$SECRET_ACCESS_KEY/https://github.com/mhackersu/aws-platform-assessment)
+[![Open in Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](http://gitpod.io/#/https://github.com/mhackersu/aws-platform-assessment)
 
 Once your environment has fully launched, within the shell, issue the following to set your credentials.
 
