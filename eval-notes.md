@@ -122,7 +122,7 @@ This script installs `jq` and `miller` that's it. You can install those manually
 
 After dependancies have been loaded, this is the "easy-button" single script that kicks off the build and release processes.
 
-`cd /inf && ./.ci_start.sh`
+`cd inf && ./.ci_start.sh`
 
 -or-
 
