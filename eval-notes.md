@@ -104,7 +104,11 @@ sak="Secret access key"
 - Gitpod
 - Localstack
 
-# Results
+# Demo
+
+Clone this repo
+
+`git clone git@github.com:mhackersu/aws-platform-assessment.git`
 
 ## Env Init Script
 
