@@ -112,7 +112,7 @@ Clone this repo
 
 ## Env Init Script
 
-This script installs `jq` and `miller` that's it.
+This script installs `jq` and `miller` that's it. You can install those manually as well if preferred.
 
 ```
 ./inf/.ci-init.sh
@@ -120,16 +120,20 @@ This script installs `jq` and `miller` that's it.
 
 ## Env Launch Script
 
-This is the "easy-button" single script that kicks off the build and release processes.
+After dependancies have been loaded, this is the "easy-button" single script that kicks off the build and release processes.
 
-Follow these steps to launch the environment:
+`cd /inf && ./.ci_start.sh
+
+-or-
+
+Follow these steps to launch the environment
 
 - Navigate to the command line
 - From the command line, make sure you are at the root directory of this project. You can type `pwd` on a linux terminal to display the current working directory which is a handy way of looking up where you are.
 - Navigate to the inf directory. This can be done by typing `cd inf`
-- Next, type the following
+- Next, type the following (not including the command substitution $)
 
-`./inf/.ci-start.sh`
+`$ .ci-start.sh`
 
 This command will read the credentials from the file supplied and launch a web-browser with a web-version VS Code IDE environment.
 
