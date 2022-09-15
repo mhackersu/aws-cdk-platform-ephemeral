@@ -99,6 +99,8 @@ sak="Secret access key"
 - Set producer to publicly available on port 3000
 - Print the producer URL to the terminal.
 - Trigger the `checkin` event handler on the consumer every t seconds.
+- List curls on public network, similar to localhost curls docs.
+- Nice to have: Provide a mechanisim to select an item to curl from the terminal.
 
 #### Sprint 4
 
