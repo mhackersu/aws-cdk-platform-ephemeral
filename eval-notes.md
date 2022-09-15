@@ -124,6 +124,20 @@ After dependancies have been loaded, this is the "easy-button" single script tha
 
 `cd inf && ./.ci_start.sh`
 
+Your output should be similar to the following output:
+
+```
+[hacker@archy aws-platform-assessment]$  cd inf && ./.ci_start.sh
+*** START AWS CREDSTACK ***
+User name: "mike-hacker"
+Password: ******** PASSWORD REDACTED ********
+Access Key ID: ******** ACCESS KEY ID REDACTED ********
+Secret Access Key: ******** SECRET ACCESS KEY REDACTED ********
+*** END AWS CREDSTACK ***
+*** NO USE IN PRD / FOR DEV ONLY ***
+
+```
+
 -or-
 
 Follow these steps to launch the environment
