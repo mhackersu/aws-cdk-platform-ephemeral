@@ -2,7 +2,7 @@
 
 github:
         prebuilds:
-                master: true
+                master: false
                 branches: false
                 pullRequests: true
                 pullRequestsFromForks: false
