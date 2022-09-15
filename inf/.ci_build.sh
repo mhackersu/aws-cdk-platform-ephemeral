@@ -1,16 +1,10 @@
+#!/bin/bash
+
 echo "This is the builder"
 
-echo "# Setting up AWS Credentials and Region for CLI Tooling"
+# Prep any additional shell scripts with this command
+# Removes carriage return by substituting \r for an empty string
+# The utiliy used here is the sed tool (stream edit command)
+# sed -i -e 's/\r$//' script.sh
 
-mkdir ~/.aws
-
-touch ~/.aws/config
-
-echo "[default]" >> ~/.aws/config
-echo "region=us-east-1" >> ~/.aws/config
-
-touch ~/.aws/credentials
-
-echo "[default]" >> ~/.aws/credentials
-echo "aws_access_key_id="$aki | tr -d '"' >> ~/.aws/credentials
-echo "aws_secret_access_key="$sak | tr -d '"' >> ~/.aws/credentials
+./.ci_aws_creds.sh
