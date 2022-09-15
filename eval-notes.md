@@ -102,11 +102,36 @@ sak="Secret access key"
 
 #### Sprint 4
 
-CDK Environment is Ready
+###### CDK Dependency is Loading
+
+As per line 8 on `.gitpod.Dockerfile`
 
 ```
 gitpod /workspace/aws-platform-assessment (main) $ cdk --version
 2.41.0 (build 6ad48a3)
+```
+
+###### AWS Creds Builder
+
+`.gitpod.yml` calls `.ci_build.sh`
+`.ci_build.yaml` calls `.ci_aws_creds.sh`
+
+Note: Your output will not be redacted as shown here:
+
+```
+gitpod /workspace/aws-platform-assessment (main) $  HISTFILE=/workspace/.gitpod/cmd-0 history -r; {
+> cd inf && ./.ci_build.sh
+> 
+> }
+This is the builder
+# Setting up AWS Credentials and Region for CLI Tooling
+gitpod /workspace/aws-platform-assessment/inf (main) $ cat ~/.aws/config 
+[default]
+region=us-east-1
+gitpod /workspace/aws-platform-assessment/inf (main) $ cat ~/.aws/credentials 
+[default]
+aws_access_key_id=*** REDACTED ***
+aws_secret_access_key=*** REDACTED ***
 ```
 
 #### Sprint 5
