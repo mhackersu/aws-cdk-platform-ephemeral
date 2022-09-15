@@ -36,6 +36,7 @@ According to the experiment, work is not to exceed 3 total hours, therefore I ha
 - It's really important to control this process thru an entry script, in comparision to, some hosted CI Saas tooling (eg. GitHub Actions).
 - Assuming bash shell scripts are appropriate selection (_as per TS, node, etc._).
 - Adhoc/sandbox creds are throw away credentials but they should be approached programmatically as if they actually are sensitive values, as, ultimatly, they become patterns that are developed over time as containers are bootstrapped in the beginning phases of Day 0 Ops.
+- We're using public docker images for generic things.
 
 # Reasoning
 
@@ -88,7 +89,21 @@ sak="Secret access key"
 
 #### Sprint 3
 
+###### Planning
+
+- Using CDK language, create and deploy two containers, in the same VPC, with the producer open to the public internet on port 443. Each already have their build scripts, so yay, and there is no publishing going on so it's actually quite straight-forward here, once the `cdk synth` `cdk deploy` are done, defer back to the script to output the producer back-end URL while calling the `checkin` event handler on the consumer front-end. Outside of logging, healthcheck, or test, I suppose that it is reasonable to assume that the event handler call seems to makeup the entirety of the exercise. Both are NodeJS (ExpressJS and TypeScript), builds are pre-defined in the container files, using `npm` scripts in their accompanying package.json files. Consumer exports a function called backend so that's a little confusing, but it's reasonable as well because it really is the backend because it's doing the negotiation with the data-layer and the producer here is really more of the api-middleware. Express is just doing it's job; Giving us a http route. If we look at where `/checkin` route is defined, we will see this is where the `checkin()` function that we are importing from the consumer.
+
+- Using a common build script, instanciate both builds, configure network for producer, while printing the output of the `producer` (API) URL/URI to the screen in the terminal window, and calling the consumer event handler ever t seconds. 
+
+- Build two containers.
+- Set producer to publicly available on port 3000
+- Print the producer URL to the terminal.
+- Trigger the `checkin` event handler on the consumer every t seconds.
+
 #### Sprint 4
+
+- Environment is prepped.
+- Start work.
 
 #### Sprint 5
 
