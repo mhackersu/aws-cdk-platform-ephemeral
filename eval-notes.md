@@ -118,6 +118,8 @@ gitpod /workspace/aws-platform-assessment (main) $ cdk --version
 
 Note: Your output will not be redacted as shown here:
 
+`cat ~/.aws/config && ~/.aws/credentials
+
 ```
 gitpod /workspace/aws-platform-assessment (main) $  HISTFILE=/workspace/.gitpod/cmd-0 history -r; {
 > cd inf && ./.ci_build.sh
