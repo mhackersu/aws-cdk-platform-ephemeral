@@ -102,6 +102,9 @@ sak="Secret access key"
 
 #### Sprint 4
 
+- Environment is prepped.
+- Start work.
+
 #### Sprint 5
 
 # Research
