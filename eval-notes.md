@@ -102,8 +102,12 @@ sak="Secret access key"
 
 #### Sprint 4
 
-- Environment is prepped.
-- Start work.
+CDK Environment is Ready
+
+```
+gitpod /workspace/aws-platform-assessment (main) $ cdk --version
+2.41.0 (build 6ad48a3)
+```
 
 #### Sprint 5
 
