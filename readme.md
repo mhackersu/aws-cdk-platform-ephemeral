@@ -21,6 +21,7 @@ $ mv creds.csv cdk-project/
 
 # Navigate to the root of the cloned project, run the shell script:
 `launch.sh`
+```
 
 ```
 $ cd aws/platform/assessment && ./launch.sh
