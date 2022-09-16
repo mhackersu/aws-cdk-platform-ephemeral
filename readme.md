@@ -1,5 +1,7 @@
 # Inception Health Technical Challenge
 
+[Submission](https://github.com/mhackersu/aws-platform-assessment/blob/main/eval-notes.md)
+
 ## Assignment
 
 * Using the tools and language of your choice, write code that deploys the application provided in `app/` using a single command.
