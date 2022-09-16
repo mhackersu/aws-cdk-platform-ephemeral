@@ -1,7 +1,7 @@
 PID=$!
 
-# Location of Creds File Relative to this Script
-CRED_FILE='../../mike-creds.csv'
+# Location of Creds File Relative to your home directory.
+CRED_FILE='../../../mike-creds.csv'
 
 echo "*** START AWS CREDSTACK ***"
 

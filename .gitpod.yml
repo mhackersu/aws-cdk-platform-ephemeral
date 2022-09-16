@@ -14,4 +14,4 @@ image:
 tasks:
         - name: Init CI Start Script
           init: >
-                cd inf && ./.ci_build.sh
+                cd inf/ci/ && ./.ci_build.sh
