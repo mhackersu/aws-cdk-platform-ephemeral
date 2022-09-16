@@ -4,7 +4,7 @@
 
 ## Demo
 
-Follow these steps to run the demo locally:
+Follow these steps to launch the demo:
 
 ```
 # Open terminal app (iTerm2, GitBash, Bash, etc.)
