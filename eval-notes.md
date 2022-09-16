@@ -149,23 +149,85 @@ gitpod /workspace/aws-platform-assessment/inf/ci (main) $ cdklocal --version
 2.42.0 (build 7d8ef0b)
 ```
 
-We can curl the localstack and validate that it is running.
+We can curl the localstack and validate that it is running. We are using JQ to make the output more readable.
 
 ```
 yay curl
-curl http://localhost:4566/health
+curl http://localhost:4566/health | jq ','
 ```
 
-Start localstack
-
+Start localstack and boostrap localcdk
 ```
-start localstack
-```
-
-Great. Let's init our app.
-
+SERVICES=serverless,sqs,sns,s3,ecs localstack start
 ```
 
+Init app
+
+```
+cdklocal init sample-app --language=typescript
+```
+
+Boostrap localstack
+
+```
+cdklocal boostrap
+
+gitpod /workspace/aws-platform-assessment/lib/cdk (main) $ cdklocal bootstrap
+ ⏳  Bootstrapping environment aws://000000000000/us-east-1...
+Trusted accounts for deployment: (none)
+Trusted accounts for lookup: (none)
+Using default execution policy of 'arn:aws:iam::aws:policy/AdministratorAccess'. Pass '--cloudformation-execution-policies' to customize.
+CDKToolkit: creating CloudFormation changeset...
+ ✅  Environment aws://000000000000/us-east-1 bootstrapped.
+```
+
+Deploy app
+
+```
+$ cdklocal deploy
+...
+gitpod /workspace/aws-platform-assessment/lib/cdk (main) $ cdklocal deploy
+
+✨  Synthesis time: 5.48s
+
+CdkStack: building assets...
+
+[0%] start: Building f6cb74b6af91d9572d7e02ab08495f7505fd1a482c0472324ba62519bd463aa7:current_account-current_region
+[100%] success: Built f6cb74b6af91d9572d7e02ab08495f7505fd1a482c0472324ba62519bd463aa7:current_account-current_region
+
+CdkStack: assets built
+
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
+
+IAM Statement Changes
+┌───┬────────────┬────────┬────────────┬────────────┬────────────┐
+│   │ Resource   │ Effect │ Action     │ Principal  │ Condition  │
+├───┼────────────┼────────┼────────────┼────────────┼────────────┤
+│ + │ ${CdkQueue │ Allow  │ sqs:SendMe │ Service:sn │ "ArnEquals │
+│   │ .Arn}      │        │ ssage      │ s.amazonaw │ ": {       │
+│   │            │        │            │ s.com      │   "aws:Sou │
+│   │            │        │            │            │ rceArn": " │
+│   │            │        │            │            │ ${CdkTopic │
+│   │            │        │            │            │ }"         │
+│   │            │        │            │            │ }          │
+└───┴────────────┴────────┴────────────┴────────────┴────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Do you wish to deploy these changes (y/n)? y
+CdkStack: deploying...
+[0%] start: Publishing f6cb74b6af91d9572d7e02ab08495f7505fd1a482c0472324ba62519bd463aa7:current_account-current_region
+[100%] success: Published f6cb74b6af91d9572d7e02ab08495f7505fd1a482c0472324ba62519bd463aa7:current_account-current_region
+CdkStack: creating CloudFormation changeset...
+
+ ✅  CdkStack
+
+✨  Deployment time: 5.24s
+
+Stack ARN:
+arn:aws:cloudformation:us-east-1:000000000000:stack/CdkStack/f9bc7e9b
+
+✨  Total time: 10.72s
 ```
 
 #### Sprint 5
