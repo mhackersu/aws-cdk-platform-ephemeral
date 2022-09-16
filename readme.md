@@ -17,7 +17,7 @@ $ git clone git@github.com:mhackersu/aws-platform-assessment.git
 # Copy the secrets file (creds.csv) into the newly created folder.
 $ mv creds.csv cdk-project/
 
-# From the newly created folder, run the following command:
+# From the newly created folder, navigate to the `inf/ci/` folder, contained within the cloned project, run the shell script `.ci_start.sh`
 $ cd inf/ci/ && ./.ci_start.sh cd ../../
 ```
 
