@@ -150,7 +150,8 @@ aws_secret_access_key=*** REDACTED ***
 
 - GitHub Actions
 - Gitpod
-- Localstack
+- CDK Localstack
+- CDK CodePipeline (For lower envs between dev and prd (eg.stg,tst,etc))
 
 # Demo
 
