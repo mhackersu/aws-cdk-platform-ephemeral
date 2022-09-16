@@ -9,17 +9,16 @@ Follow these steps to run the demo locally:
 ```
 # Open terminal app (iTerm2, GitBash, Bash, etc.)
 # Create a folder to house the project and the secrets and then navigate into the folder.
-
-mkdir cdk-project && cd cdk-project
+$ mkdir cdk-project && cd cdk-project
 
 # Clone the repo into the newly created folder.
-git clone git@github.com:mhackersu/aws-platform-assessment.git
+$ git clone git@github.com:mhackersu/aws-platform-assessment.git
 
 # Copy the secrets file (creds.csv) into the newly created folder.
-mv creds.csv cdk-project/
+$ mv creds.csv cdk-project/
 
 # From the newly created folder, run the following command:
-cd inf/ci/ && ./.ci_start.sh cd ../../
+$ cd inf/ci/ && ./.ci_start.sh cd ../../
 ```
 
 ## Assignment
