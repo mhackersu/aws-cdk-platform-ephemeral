@@ -8,6 +8,8 @@ Follow these steps to run the demo locally:
 
 ```
 # Open terminal app (iTerm2, GitBash, Bash, etc.)
+# Run `init.sh` (May have to modify for your particular system/OS)
+
 # Create a folder to house the project and the secrets and then navigate into the folder.
 $ mkdir cdk-project && cd cdk-project
 

@@ -140,6 +140,34 @@ aws_secret_access_key=*** REDACTED ***
 
 ###### Bootstrapping AWS for CDK
 
+While we're waiting for credentials to reset, let's see how localstack can help us.
+
+```
+npm install -g aws-cdk-local
+
+gitpod /workspace/aws-platform-assessment/inf/ci (main) $ cdklocal --version
+2.42.0 (build 7d8ef0b)
+```
+
+We can curl the localstack and validate that it is running.
+
+```
+yay curl
+curl http://localhost:4566/health
+```
+
+Start localstack
+
+```
+start localstack
+```
+
+Great. Let's init our app.
+
+```
+
+```
+
 #### Sprint 5
 
 # Research
