@@ -138,6 +138,8 @@ aws_access_key_id=*** REDACTED ***
 aws_secret_access_key=*** REDACTED ***
 ```
 
+###### Bootstrapping AWS for CDK
+
 #### Sprint 5
 
 # Research
