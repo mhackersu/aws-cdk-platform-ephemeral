@@ -23,6 +23,8 @@ $ mv creds.csv cdk-project/
 `launch.sh`
 ```
 
+Launch the demo environment:
+
 ```
 cd aws-platform-assessment && ./launch.sh
 ```
