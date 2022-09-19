@@ -5,4 +5,4 @@ FROM gitpod/workspace-full:latest
 WORKDIR /usr/src/app
 
 # Install localstack
-RUN pip install localstack awscli awscli-local docker && npm install -g aws-cdk aws-cdk-local
+RUN pip install localstack awscli awscli-local docker && npm install -g aws-cdk-local && npm install aws-cdk
