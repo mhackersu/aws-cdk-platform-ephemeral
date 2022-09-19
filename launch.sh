@@ -1,1 +1,1 @@
-cd inf/ci/ && ./.ci_start.sh cd ../../
+cd lib/ci/ && ./.ci_start.sh cd ../../
