@@ -24,7 +24,7 @@ $ mv creds.csv cdk-project/
 ```
 
 ```
-$ cd aws/platform/assessment && ./launch.sh
+$ cd aws-platform-assessment && ./launch.sh
 ```
 
 ## Assignment
