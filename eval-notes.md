@@ -116,6 +116,7 @@ gitpod /workspace/aws-platform-assessment (main) $ cdk --version
 ###### AWS Creds Builder
 
 `.gitpod.yml` calls `.ci_build.sh`
+
 `.ci_build.yaml` calls `.ci_aws_creds.sh`
 
 Note: Your output will not be redacted as shown here:
@@ -124,7 +125,7 @@ Note: Your output will not be redacted as shown here:
 
 ```
 gitpod /workspace/aws-platform-assessment (main) $  HISTFILE=/workspace/.gitpod/cmd-0 history -r; {
-> cd inf && ./.ci_build.sh
+> cd lib/ci/ && ./.ci_build.sh
 > 
 > }
 This is the builder
